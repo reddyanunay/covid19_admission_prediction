@@ -1,0 +1,57 @@
+body{
+    background-image: url(images/doctor.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+.heading{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+}
+p{
+    margin:0 10px 0 0;
+}
+input[type = text]{
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid black;
+    border-color: rgba(0, 0, 0, .15);
+    /* background-color: #F2EBE9; */
+    font-size: 16px;
+}
+.container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.frst_part{
+    flex: 1;
+    align-items: center;
+    width: 50%;
+    margin-left: 20%;
+}
+.second_part{
+    flex: 1;
+    width: 50%;
+}
+.element{
+    display: flex;
+}
+.submission{
+    margin-left: 43%;
+    padding:5px 15px; 
+    color: whitesmoke;
+    background:#3A5BA0; 
+    border:0 black;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 200px;
+}

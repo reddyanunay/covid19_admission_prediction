@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result page</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if ans %}
+    <h1 class="yes">You better get admitted in the hospital.</h1><br><br>
+    {% else %}
+    <h1 class="no">You are most probably be okay but eat healthy and stay safe. No need to get admitted in ICU</h1>
+    {% endif %}
+
+    <p> The accuracy of the model is 82.11%.</p>
+
+<br><br> 
+    <a href="{% url 'home'%}">Check again</a>
+</body>
+</html>

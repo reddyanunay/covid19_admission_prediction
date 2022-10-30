@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid ICU Prediction</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <h1 class="heading">Welcome to ICU Prediction</h1><br>
+
+    <form action="{% url 'result' %}">
+        <div class="container">
+
+        {% csrf_token %}
+        <div class="frst_part">
+            <div class="element">
+                <p>Age_above_65 ?</p>
+                <input type="text" required name="Age_above_65" placeholder="(Yes -> '1', No -> '0')">
+            </div> <br>
+
+            <div class="element">
+                <p>Age_percintil :</p>
+                <input type="text" required name="Age_percintil" placeholder="(Your age by decade)">
+            </div> <br>
+
+            <div class="element" class="gender">
+                <p style="margin-right: 75px;">Gender :</p>
+                <input type="radio" id="genderChoice1" name="gender" value="1" required>
+                        <label for="genderChoice1" style="margin-right:50px ;">Male</label>
+                        <input type="radio" id="genderChoice2" name="gender" value="0" required>
+                        <label for="genderChoice2">Female</label>
+            </div><br><br>
+
+            <div class="element">
+                <p> Bp_diastolic_mean :</p>
+                <input type="text" required name="Bp_diastolic_mean">
+            </div><br>
+            <div class="element">
+                <p> Bp_sistolic_mean :</p>
+                <input type="text" required name="Bp_sistolic_mean">
+            </div><br>
+            <div class="element">
+                <p> Bp_diastolic_median :</p>
+                <input type="text" required name="Bp_diastolic_median">
+            </div><br>
+            <div class="element">
+                <p> Bp_sistolic_median :</p>
+                <input type="text" required name="Bp_sistolic_median">
+            </div><br>
+            <div class="element">
+                <p> Bp_diastolic_min :</p>
+                <input type="text" required name="Bp_diastolic_min">
+            </div><br>
+        </div>
+        <div class="second_part">
+            <div class="element">
+                <p> Bp_sistolic_min :</p>
+                <input type="text" required name="Bp_sistolic_min">
+            </div><br>
+            <div class="element">
+                <p> Bp_diastolic_max :</p>
+                <input type="text" required name="Bp_diastolic_max">
+            </div><br>
+            <div class="element">
+                <p> Bp_sistolic_max :</p>
+                <input type="text" required name="Bp_sistolic_max">
+            </div><br>
+            <div class="element">
+                <p> Bp_diastolic_diff :</p>
+                <input type="text" required name="Bp_diastolic_diff">
+            </div><br>
+            <div class="element">
+                <p> Bp_sistolic_diff :</p>
+                <input type="text" required name="Bp_sistolic_diff">
+            </div><br>
+            <div class="element">
+                <p> Bp_diastolic_diff_rel :</p>
+                <input type="text" required name="Bp_diastolic_diff_rel">
+            </div><br>
+            <div class="element">
+                <p> Bp_sistolic_diff_rel :</p>
+                <input type="text" required name="Bp_sistolic_diff_rel">
+            </div><br>
+        </div>
+    </div>
+       <input type="submit" name="" value="Get Result" class="submission">
+    </form>
+</body>
+</html>

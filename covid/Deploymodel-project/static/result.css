@@ -1,0 +1,21 @@
+.yes,.no{
+    padding: 70px 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+p,a{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding:5px 15px; 
+    background:#A5BECC; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 100px;
+    margin-left: 47%;
+}
